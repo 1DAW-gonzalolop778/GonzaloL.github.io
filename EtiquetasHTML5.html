@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8" />
+		<title>U2. Tarea8: Etiquetas HTML5. Etiqueta oninput : intruduciendo cálculos en la web.</title>
+	</head>
+    <body>
+        <h1>Longitud y area de la circunferencia</h1>
+        <h3>Mueva el indicador del radio para calcular la longitud y el area de la circunferencia</h3>    
+        <form oninput="x.value=parseInt(a.value * 2 * 3.1416);z.value=parseInt(a.value);y.value=parseInt(a.value * a.value * 3.1416)">    
+            Radio:     1 <input type="range" id="a" name="a" value="0"> 100    
+            <br><br>    
+            Valor del radio: <output name="z" for="a"> </output>
+            <br><br>    
+            Longitud de la circunferencia: <output name="x" for="a"> </output>
+            <br></br>
+            Area de la circunferencia: <output name="y" for="a"> </output>  
+        </form>
+        <hr></hr>
+        <h1>Area de un cuadrado</h1>
+        <h3>Mueva el indicador del lado para cacular el area de un cuadrado</h3>    
+        <form oninput="x.value=parseInt(b.value * b.value); z.value=parseInt(b.value)">    
+            Lado:     1 <input type="range" id="b" name="b" value="0"> 100    
+            <br><br>    
+            Valor del lado: <output name="z" for="b"> </output>
+            <br><br>    
+            Area del cuadrado: <output name="x" for="a"> </output>
+        </form>
+        <hr></hr>
+        <h1>Area de un rectangulo</h1>
+        <h3>Mueva el indicador del lado para cacular el area de un rectangulo</h3>    
+        <form oninput="x.value=parseInt(b.value * a.value); z.value=parseInt(b.value); y.value=parseInt(a.value)">    
+            Lado1:     1 <input type="range" id="a" name="a" value="0"> 100    
+            <br><br> 
+            Lado2:     1 <input type="range" id="b" name="b" value="0"> 100    
+            <br><br>   
+            Valor del lado1: <output name="y" for="a"> </output>
+            <br><br>
+            Valor del lado2: <output name="z" for="b"> </output>
+            <br><br>    
+            Area del rectangulo: <output name="x" for="a"> </output>
+            <br><br> 
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            </canvas>
+        </form>
+    </body>
+</html>
