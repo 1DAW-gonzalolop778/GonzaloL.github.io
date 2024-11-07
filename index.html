@@ -3,27 +3,96 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Tarea 2. Enlazando un sitio web. indice.html</title>
+		<style>
+			body {
+				margin: 0;
+			}
+			.lista2 {
+				list-style-type: none;
+				margin-top: 2.5%;
+				padding: 0;
+				width: 10%;
+				position: fixed;
+				overflow: auto;
+				height: 100%;
+				background-color: yellowgreen;
+			}
+			.lis2 a {
+				display: block;
+				width: 100%;
+				color: black;
+				text-decoration: none;
+				padding: 8px 10px;
+				font-family: 'Courier New', Courier, monospace;
+			}
+			.lis2 a:hover {
+				background-color: darkgreen;
+				color: white;
+			}
+
+			.lista{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				position: fixed;
+				overflow: hidden;
+				height: 5%;
+				background-color: aqua;
+			}
+			.lis{
+				float: left;
+			}
+			.lis a{
+				display: block;
+				width: 75%;
+				color: black;
+				text-decoration: none;
+				padding: 8px 10px;
+				font-family: sans-serif;
+			}
+			.lis a:hover{
+				background-color: blue;
+				color: white;
+			}
+
+		</style>
 	</head>
 	<body>
-		<hr></hr>
-		<h1>Lenguajes de marcas y sistemas de gestión de información</h1>
-		<h3>Gonzalo López Luque</h3>
-		<ol>
-			<li><a href="#1">Paginas web</a></li>
-		</ol>
-		<hr></hr>
-		<h3 id "#1">Páginas web</h3>
-		<ol>
-			<li><a href="1tamaños.html">Web Tamaños</a></li>
-			<li><a href="2listas.html">Web Listas</a></li>
-			<li><a href="3enlaces.html">Web Enlaces</a></li>
-			<li><a href="4imagenes.html">Web Imagenes</a></li>
-			<li><a href="5secciones.html">Web Secciones</a></li>
-			<li><a href="6tablas.html">Web Tablas</a></li>
-			<li><a href="7videos.html">Web Videos</a></li>
-			<li><a href="8formularios.html">Web Formularios</a></li>
-			<li><a href="Gonzalo.html">Web de Gonzalo</a></li>
-			<li><a href="9html5.html">Web de html5</a></li>
-			<li><a href="EtiquetasHTML5.html">Web de Calcular Areas</a></li>
+		<ul class="lista">
+			<li class="lis"><a href="1tamaños.html">Web Tamaños</a></li>
+			<li class="lis"><a href="2listas.html">Web Listas</a></li>
+			<li class="lis"><a href="3enlaces.html">Web Enlaces</a></li>
+			<li class="lis"><a href="4imagenes.html">Web Imagenes</a></li>
+			<li class="lis"><a href="5secciones.html">Web Secciones</a></li>
+			<li class="lis"><a href="6tablas.html">Web Tablas</a></li>
+			<li class="lis"><a href="7videos.html">Web Videos</a></li>
+			<li class="lis"><a href="8formularios.html">Web Formularios</a></li>
+			<li class="lis"><a href="Gonzalo.html">Web de Gonzalo</a></li>
+			<li class="lis"><a href="9html5.html">Web de html5</a></li>
+			<li class="lis"><a href="EtiquetasHTML5.html">Web de Calcular Areas</a></li>
+		</ul>
+
+		
+		<ul class="lista2">
+			<li class="lis2"><a href="1tamaños.html">Web Tamaños</a></li>
+			<li class="lis2"><a href="2listas.html">Web Listas</a></li>
+			<li class="lis2"><a href="3enlaces.html">Web Enlaces</a></li>
+			<li class="lis2"><a href="4imagenes.html">Web Imagenes</a></li>
+			<li class="lis2"><a href="5secciones.html">Web Secciones</a></li>
+			<li class="lis2"><a href="6tablas.html">Web Tablas</a></li>
+			<li class="lis2"><a href="7videos.html">Web Videos</a></li>
+			<li class="lis2"><a href="8formularios.html">Web Formularios</a></li>
+			<li class="lis2"><a href="Gonzalo.html">Web de Gonzalo</a></li>
+			<li class="lis2"><a href="9html5.html">Web de html5</a></li>
+			<li class="lis2"><a href="EtiquetasHTML5.html">Web de Calcular Areas</a></li>
+		</ul>
+
+		
+		<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+			<p>dsdg </p>
+			<h1>Lenguajes de marcas y sistemas de gestión de información</h1>
+			<h3>Gonzalo López Luque</h3>
+		</div>
 	</body>
 </html>
