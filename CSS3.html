@@ -39,6 +39,102 @@
                 background: red;
                 transition: width 2s;
             }
+            .f:hover{
+                background-color: purple;
+                width: 350px;
+            }
+            .g{
+                border-radius: 25px;
+                background: red;
+                padding: 20px;
+                width: 200px;
+                height: 25px;
+                opacity: 0.6;
+            }
+            .h1{
+                column-count: 3;
+                background-color: beige;
+            }
+            .h2{
+                column-count: 5;
+                background-color: burlywood;
+            }
+            #cajal{
+                float: none;
+                background-color: #5e44dc;
+                color:#ffffff;
+                height: 200px;
+                width: 400px;
+                border: 3px black;
+                box-sizing: border-box;
+                animation-name: caja1;
+                animation-duration: 3s;
+            }
+            #caja2{
+                background-color:#942ab4;
+                color:#ffffff;
+                height: 100px;
+                width: 200px;
+                border: 6px black;
+                box-sizing: border-box;
+                animation-name: caja2;
+                animation-duration: 3s;
+            }
+            @keyframes caja1 {
+                from {background-color: #5e44dc;}
+                to {background-color: yellow;}
+            }
+            @keyframes caja2 {
+                from {background-color: #942ab4;}
+                to {background-color: green;}
+            }
+            .i2 {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                position: relative;
+                animation-name: mov;
+                animation-duration: 4s;
+                animation-iteration-count: 4;
+            }
+
+            @keyframes mov {
+                0%   {background-color:blue; left:0px; top:0px;}
+                25%  {background-color:yellow; left:200px; top:0px;}
+                50%  {background-color:green; left:200px; top:200px;}
+                75%  {background-color:blue; left:0px; top:200px;}
+                100% {background-color:blue; left:0px; top:0px;}
+            }
+            .k1{
+                width: 150px;
+                height: 80px;
+                background-color: grey;
+                transform: scale(0.5, 2.5);
+            }
+            .k2{
+                width: 150px;
+                height: 80px;
+                background-color: darkgray;
+                transform: scale3d(1.5, 2, 3);
+            }
+            .k3{
+                width: 150px;
+                height: 80px;
+                background-color: grey;
+                transform: rotate(30deg);
+            }
+            .k4{
+                width: 150px;
+                height: 80px;
+                background-color: darkgray;
+                transform: rotate3d(1.5, 2, 3, 30deg);
+            }
+            .k5{
+                width: 150px;
+                height: 80px;
+                background-color: grey;
+                transform: skewX(30deg);
+            }
         </style>
 	</head>
 	<body>
@@ -84,5 +180,33 @@
                 <td>fila1-celda3</td>
             </tr>
         </table>
+        <h2>F) Transiciones</h2>
+
+        <h2 class = "g">Gonzalo</h2>
+        <h2>G) Opacidad</h2>
+
+        <p class = "h1">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit rhoncus sagittis, integer hendrerit mi eget magnis pretium nascetur nisi enim, accumsan quis maecenas class phasellus lobortis interdum vulputate. Fermentum viverra nulla dis congue nisi nibh aenean convallis id, curabitur vulputate a imperdiet vestibulum nam malesuada lectus montes, tempus donec elementum mollis commodo tempor diam hac. Torquent magnis luctus tincidunt class eu cubilia auctor ullamcorper rhoncus netus, litora sed id nunc potenti molestie ultricies augue eros tellus, fermentum est at donec ligula congue libero faucibus hendrerit.
+        </p>
+        <p class = "h2">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit rhoncus sagittis, integer hendrerit mi eget magnis pretium nascetur nisi enim, accumsan quis maecenas class phasellus lobortis interdum vulputate. Fermentum viverra nulla dis congue nisi nibh aenean convallis id, curabitur vulputate a imperdiet vestibulum nam malesuada lectus montes, tempus donec elementum mollis commodo tempor diam hac. Torquent magnis luctus tincidunt class eu cubilia auctor ullamcorper rhoncus netus, litora sed id nunc potenti molestie ultricies augue eros tellus, fermentum est at donec ligula congue libero faucibus hendrerit.
+        </p>
+        <h2>H) Columnas</h2>
+
+        <div id="cajal">
+            <p> CAJA1,  tiene propiedad   float puesta  a none,  por lo que aparece  donde  le corresponde  sin  flotar</p>
+        </div>
+        <div id="caja2">
+            <p>Esta  es la CAJA2 , por defecto  aparece  debajo  de la primera  caja. No usa la propiedad  <b>float</b>  </p>
+        </div>
+        <div class = "i2"></div>
+        <h2>I) Animaciones</h2>
+
+        <div class = "k1">scale(x, y)</div>
+        <div class = "k2">scale3d(x, y, z)</div>
+        <div class = "k3">rotate(angulo)</div>
+        <div class = "k4">rotate3d(x, y, z, angulo)</div>
+        <div class = "k5">skewX(angulo)</div>
+        <h2>K) Transiciones</h2>
 	</body>
     </html>
