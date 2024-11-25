@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>GonzaloL</title>
+	<style>
+		/* Divs de fondo */
+		.div1, .div2 {
+			position: absolute; /* Esto coloca los divs detrás de la tabla */
+			height: 100%;
+			width: 50%;
+			z-index: -1; /* Los coloca detrás de otros elementos */
+		}
+		.div1 {
+			background-color: rgb(148, 0, 0);
+			left: 0;
+		}
+		.div2 {
+			background-color: rgb(0, 56, 0);
+			right: 0;
+		}
+
+		/* Estilo de la tabla */
+		table {
+			margin: 0 auto; /* Centra la tabla horizontalmente */
+			border-collapse: collapse; /* Fusiona los bordes de la tabla */
+			position: relative; /* Asegura que la tabla esté por encima de los divs */
+			z-index: 1; /* Asegura que la tabla esté encima de los divs */
+		}
+
+		td, th {
+			padding: 8px 12px; /* Espaciado en las celdas */
+			border: 1px solid #ccc; /* Borde alrededor de las celdas */
+		}
+
+		footer {
+			text-align: center;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Divs de fondo -->
+	<div class="div1"></div>
+	<div class="div2"></div>
+
+	<!-- Tabla centrada -->
+	<table border="5">
+		<caption><b>Sevilla-Betis</b></caption>
+		<thead>
+		<tr> 
+			<td colspan="4" align="center" style="background-color:red;">Sevilla</td>
+			<td colspan="4" align="center" style="background-color:green;">Betis</td>
+		</tr>
+		</thead>
+		<tr> 
+			<td style="background-color:red;"><img src="SEVILLA/jesusnavas.jpeg" width="200" height="200" /></td>
+			<td style="background-color:red;"><img src="SEVILLA/juleskounde.jpg" width="200" height="200" /></td>
+			<td style="background-color:red;"><img src="SEVILLA/Dejong.jpg" width="200" height="200" /></td>
+			<td style="background-color:red;"><img src="SEVILLA/everbanega.jpg" width="200" height="200" /></td>
+			<td style="background-color:green;"><img src="BETIS/bartra.jpeg" width="200" height="200" /></td>
+			<td style="background-color:green;"><img src="BETIS/tello.jpeg" width="200" height="200" /></td>
+			<td style="background-color:green;"><img src="BETIS/william.jpeg" width="200" height="200" /></td>
+			<td style="background-color:green;"><img src="BETIS/pedraza.jpeg" width="200" height="200" /></td>
+		</tr>
+		<tr> 
+			<td align="center" style="background-color:red;">Jesus Navas</td>
+			<td align="center" style="background-color:red;">Jules Kounde</td>
+			<td align="center" style="background-color:red;">Dejong</td>
+			<td align="center" style="background-color:red;">Ever Banega</td>
+			<td align="center" style="background-color:green;">Bartra</td>
+			<td align="center" style="background-color:green;">Tello</td>
+			<td align="center" style="background-color:green;">William</td>
+			<td align="center" style="background-color:green;">Pedraza</td>
+		</tr>
+		<tr>
+			<td colspan="4" align="center" style="background-color:red;">
+				<a href="https://sevillafc.es/">
+					<img src="SEVILLA/escudo-sevilla.webp" width="200" height="200" />
+				</a>
+			</td>
+			<td colspan="4" align="center" style="background-color:green;">
+				<a href="https://www.realbetisbalompie.es/">
+					<img src="BETIS/escudo-Real-Betis-2012.webp" width="200" height="200" />
+				</a>
+			</td>
+		</tr>
+	</table>
+
+	<footer>GonzaloL</footer>
+</body>
+</html>
