@@ -4,11 +4,107 @@
 		<meta charset="utf-8" />
 		<title>Trabajo Final. HTML y CSS</title>
 		<style>
-			
+			body{
+				background-color: darkgray;
+			}
+
+			.titulo{
+				width: 500px;
+				height: 100px;
+				background-color: red;
+				border-radius: 25px 25px 25px 25px;
+				text-align: center;
+				padding-top: 1%;
+				margin-left: 35%;
+				margin-top: 2.5%;
+				box-shadow: 5px 10px rgba(0, 0, 0, 0.425) ;
+			}
+
+			.subtitulo{
+				width: 400px;
+				height: 75px;
+				background-image: linear-gradient(red, yellow, green);
+				border-radius: 25px 25px 25px 25px;
+				text-align: center;
+				padding-top: 0.75%;
+				margin-left: 37.5%;
+				margin-top: 2.5%;
+				transition: background 2s;
+			}
+
+			.subtitulo:hover{
+				background: rgb(16, 219, 192);
+			}
+
+			.t1{
+				background-color: rgb(54, 113, 121);
+			}
+			.flex-container{
+				display: flex;
+  				background-color: DodgerBlue;
+				position: absolute;
+				bottom: 0;
+				width: 97%;
+				padding: 1%;
+			}
+
+			.flex-container > div{
+				background-color: rgb(115, 115, 207);
+				padding: 1%;
+			}
+
+			.tabla{
+				margin-left: 70%;
+			}
+
+			a:hover{
+				color: aliceblue;
+			}
+
+			.enlaces{
+				display: flex;
+			}
+
+			.enlaces > div{
+				margin: 20%;
+			}
 
 		</style>
 	</head>
 	<body>
-		<a href="EjClase/indice.html">EjClase</a>
+		<div class = "titulo"><h1>Trabajo Final</h1></div>
+		<div class="subtitulo"><h2>HTML y CSS</h2></div>
+
+		<div class="flex-container">
+			<div class="enlaces">
+				<div><a href="EjClase/indice.html" >Dungeons & Dragons</a></div>
+				<div><a href="EjClase/indice.html">EjClase</a></div>	
+			</div>
+
+			<div class = "tabla">
+				<table class = "t1" border="2">
+				<tr> 
+					<td>Nombre</td>
+					<td>Gonzalo</td>
+				</tr>
+				<tr> 
+					<td>Modulo</td>
+					<td>Lenguaje de Marcas</td>
+				</tr>
+				<tr> 
+					<td>IES</td>
+					<td>Martinez Montañes</td>
+				</tr>
+				<tr> 
+					<td>Profesor</td>
+					<td>Gregorio</td>
+				</tr>
+				<tr> 
+					<td>Curso</td>
+					<td>1º DAW</td>
+				</tr>
+			</table></div>
+
+		</div>
 	</body>
 </html>
