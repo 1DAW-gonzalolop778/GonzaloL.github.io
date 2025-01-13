@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Marco</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        #superior {
+            height: 100px;
+        }
+        #contenido {
+            display: flex;
+            flex: 1;
+        }
+        #izquierda {
+            width: 150px;
+        }
+        #cuerpo {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="superior" name="superior" src="encabezado.html" frameborder="0"></iframe>
+    <div id="contenido">
+        <iframe id="izquierda" name="izquierda" src="indice.html" frameborder="0"></iframe>
+        <iframe id="cuerpo" name="cuerpo" src="inicio.html" frameborder="0"></iframe>
+    </div>
+</body>
+</html>
