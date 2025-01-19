@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Formulario</title>
+		<style>
+			body{
+                background-color: #e6cfbd;
+				margin-left: 25px;
+				margin-bottom: 50px;
+				margin-right: 10px;
+            }
+			.cita{
+				text-align: right;
+				margin-right: 100px;
+			}
+			.t1{
+				margin: 15px;
+				border-spacing: 15px;
+				width: 97%;
+			}
+			.tabla{
+				background-color: #dbc8ba;
+				padding: 1%;
+				vertical-align: top;
+				padding-bottom: 25px;
+				width: 50%;
+			}
+			.redondeado{
+				border-radius: 5%;
+			}
+			
+		</style>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+        <h1 style="font-family:verdana;">Crea tu Propio Personaje</h1>
+	<table align = "center"; border = "0"; cellpadding="5" class="t1">
+	
+	
+	<tr>
+		<td class="tabla"><h3 align = "center"; style="font-family:verdana;">Datos Personales</h3></td>
+		<td class="tabla"><h3 align = "center"; style="font-family:verdana;">Raza</h3></td>
+	</tr>
+	<tr>
+	<td  class="tabla">
+	<form action="mailto:micorreo@este.es" method="post" enctype="text/plain">
+		
+		<p align = "center"><label for="nombre">Escribe el nombre de tu personaje </label>
+		<input type="text" id="nombre" name="nombre" size="30" maxlength="30"/></p>
+
+		<p align = "center"><label for="imagen">Ponga una foto del personaje</label>
+		<input type="file" id="imagen" accept="image/*"></p>
+		<p align = "center"><label for="comentario">Escriba la historia de su personaje</label></p>
+		<p align = "center">
+		<textarea id="comentario" name="comentario" rows="10" cols="50"></textarea>
+		</p>
+
+	</td>
+	<td class="tabla">
+		
+		<p align = "center">
+			<input type="radio" id="Enano" name="so" value="Enano">
+			<label for="Enano">Enano</label>
+			<input type="radio" id="Elfo" name="so" value="Elfo">
+			<label for="Elfo">Elfo</label>
+			<input type="radio" id="Mediano" name="so" value="Mediano">
+			<label for="Mediano">Mediano</label>
+			<input type="radio" id="Humano" name="so" value="Humano">
+			<label for="Humano">Humano</label>
+			<input type="radio" id="Tiefling" name="so" value="Tiefling">
+			<label for="Tiefling">Tiefling</label>
+			<input type="radio" id="Otro" name="so" value="Otro">
+			<label for="Otro">Otro</label>
+		</p>
+		<p align = "center"><label for="otro">Especifique que raza elige si ha elegido otro</label>
+		<input type="text" id="otro" name="otro" size="30" maxlength="30"/></p>
+		<p align = "center"><label for="subraza">Especifique que subraza elige en caso de que haya</label>
+		<input type="text" id="subraza" name="subraza" size="30" maxlength="30"/></p>
+
+	</td>
+	</tr>
+	<tr>
+		<td class="tabla"><h3 align = "center"; style="font-family:verdana;">Trasfondo</h3></td>
+		<td class="tabla"><h3 align = "center"; style="font-family:verdana;">Clase</h3></td>
+	</tr>
+	<tr>
+		<td class="tabla">
+		<p align = "center"><label for="trafondo">Indique cual es el trafondo de su pesonaje</label></p>
+		<p align = "center"><select id="trafondo" name="trafondo" align = "center">
+			<option>Marque una eleccion</option>
+			<option>Acólito</option>
+			<option>Animador</option>
+			<option>Artesano Gremial</option>
+			<option>Charlatan</option>
+			<option>Criminal</option>
+		</select>
+		</p>
+	</td>
+	<td rowspan = "3";  class="tabla">
+		
+		<p align = "center">
+		<input type="checkbox" id="Barbaro" name="Barbaro">
+		<label for="Barbaro">Barbaro</label><br/>
+		<input type="checkbox" id="Bardo" name="Bardo">
+		<label for="Bardo">Bardo</label><br/>
+		<input type="checkbox" id="Guerrero" name="Guerrero">
+		<label for="Monje">Monje</label><br/>
+		<input type="checkbox" id="Italiano" name="Italiano">
+		<label for="Otro">Otro</label><br/>
+		</p>
+
+		<p align = "center"><label for="otro">En caso de marcar otro especifique cual</label></p>
+		<p align = "center"><input type="text" id="otro" name="otro" size="30" maxlength="30"/></p>
+		
+	</td>
+	</tr>
+	<tr>
+		<td class="tabla"><h3 align = "center"; style="font-family:verdana;">Añadido</h3></td>
+	</tr>
+	<tr>
+		<td class="tabla">
+		<p align = "center"><label for="comentario">Añada cualquier información adicional que quiera añadir</label></p>
+		<p align = "center">
+		<textarea id="comentario" name="comentario" rows="3" cols="50"></textarea>
+		</p>
+	</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="tabla">
+			<p align = "center"><input type="submit"value="Enviar formulario">
+			<input type="reset" value="Borrar datos"></p>
+		</td>
+		
+	</tr>
+	
+	</form>
+	</table>
+	</body>
+	<!-- Todas las etiquetas usadas aqui son las mismas usadas en 8formularios.html -->
+</html>
