@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validacion Entrada Numerica</h2>
+
+<p>Por favor, introduzca un número entre 1 y 10:</p>
+
+<form name="myForm" onsubmit="return myFunction()">
+  Valor: <input type="text" name="fnum">
+  <input type="submit" value="Enviar">
+</form>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  // Coge el valor del elemento imput con id="numb"
+  let x = document.forms["myForm"]["fnum"].value;
+  let text;
+   // Si x no es un número o es menor que 1 o es mayor que 10
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Valor no valido";
+    document.getElementById("demo").innerHTML = text;
+    return false;
+  } 
+  alert("Valor valido");
+  return true;
+}
+  
+</script>
+
+</body>
+</html> 

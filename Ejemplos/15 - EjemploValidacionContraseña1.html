@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validacion Contraseña</h2>
+
+<p>Por favor, introduzca una nueva contraseña con al menos 6 caracteres:</p>
+
+<form name = "formulario" onsubmit="return validarPassword()">
+    Contraseña: <input type="password" name = "pass">
+    <input type="submit" value="Cambiar contraseña">
+  </form>
+  
+  <script>
+  function validarPassword() {
+    let pass = document.forms["formulario"]["pass"].value;
+    if (pass.length < 6) {
+      alert("La contraseña debe tener al menos 6 caracteres.");
+      return false;
+    }
+    alert ("Contraseña valida")
+    return true;
+  }
+  </script>
+
+</body>
+</html> 

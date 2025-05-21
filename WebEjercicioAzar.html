@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de azar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        
+        header {
+            background-color: #add8e6;
+            padding: 5px;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        #contenedor-principal{
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #bienvenida {
+            padding: 20px;
+            font-size: 18px;
+        }
+        #imagenes-contenedor {
+            padding: 15px 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .imagen-contenedor {
+            /*border: 1px solid black;*/
+            padding: 5px;
+            width: fit-content;
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .imagen {
+            background-color: #ffffcc;
+            padding: 15px;
+            border: 2px solid #ccc;
+
+        }
+        #boton-comprobar {
+            display: none;
+        }
+
+        #myform {
+            margin-top: 10px;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            display: none;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="contenedor-principal">
+
+    <header>
+        <h1>Juego de azar</h1>
+    </header>
+
+    <div id="bienvenida">
+        ¡Bienvenido! Pulsa en jugar para hacer una tirada
+    </div>
+
+    <div id="imagenes-contenedor">
+    <div id="imagen1-contenedor" class="imagen-contenedor">
+   
+        <img id="imagen1" class="imagen" src="imagenInicial.png" width="150 px">
+
+    </div>
+        <div id="imagen2-contenedor" class="imagen-contenedor">
+   
+        <img id="imagen2" class="imagen" src="imagenInicial.png" width="150 px">
+
+    </div>
+     </div>
+    <button id="boton-jugar" onclick="tirada()">Jugar</button>
+    <button id="boton-comprobar" onclick="comprobar()">Comprueba si has ganado</button>
+
+    <form name="formulario" id="myform" onsubmit="return enviaDatos()">
+        <h2>¡Has ganado! <br> Introduce tus datos para recibir el premio</h2>
+        Nombre: <input class="clase-form" type="text" id="usuario" ><br><br>
+        Email: <input class="clase-form" type="text" id="email"><br><br>
+
+        <input id="boton-enviar" type="submit" value="Solicitar mi premio">
+
+    </form>
+
+</div>
+
+    <script>
+        //Defino variables y constantes comunes
+        const img1 = document.getElementById("imagen1");
+        const img2 = document.getElementById("imagen2"); 
+        const btn = document.getElementById("boton-comprobar");
+        const formulario = document.getElementById("myform"); 
+        const imagenes = [
+            'imagenlimon.png',
+            'imagenmanzana.png',
+            'imagenuvas.png',
+            'imagennaranja.png'
+        ];
+        let imgAleat;
+
+        function tirada() {
+            //Defino variables y constantes necesarias
+            let t=0;
+            let id = null;
+            const tiempo=2000; 
+
+            //Inicializo imagen2, botón-comprobar y formulario
+            img2.setAttribute("src", "imagenInicial.png");
+            btn.style.display="none";
+            formulario.style.display="none";
+
+            //Inicializo el contador
+            clearInterval(id);
+            id = setInterval(frame, 200);
+
+            //Función de la animación
+            function frame() {
+                if(t<tiempo){
+                    imgAleat=numeroAleatorio(0,3);
+                    actualizarImagen(img1, imgAleat);
+                    t+=200;
+                }
+                else{
+                    clearInterval(id);
+                    //Habilito el botón-comprobar y devuelvo el la posición de la imagen resultado de la tirada
+                    btn.style.display="inline-block";
+                    return imgAleat;
+                }
+            }
+
+        }
+        function comprobar(){
+            // Se sortea la imagen ganadora
+            let imgganadora=numeroAleatorio(0,3);
+
+            actualizarImagen(img2, imgganadora);
+            btn.style.display="none";
+            
+            //Si la imagen ganadora coincide con la que ha salido en la tirada, se habilita el formulario
+            if(imgAleat==imgganadora){
+                formulario.style.display="block";
+            }
+        }
+
+        //Función para actualizar las imágenes
+        function actualizarImagen(elem, i) {
+            elem.setAttribute('src', imagenes[i]);
+        }
+
+        //Función para gnerar un número aleatorio
+        function numeroAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        //Función de validción del formulario
+        function enviaDatos(){
+            const nombre = document.forms["formulario"]["usuario"].value;
+            const email = document.forms["formulario"]["email"].value;
+            //Miramos si el campo está vacío y el email es válido
+            if (nombre != "" && email.includes('@')) {
+                return true;
+            }else{
+                window.alert("El campo nombre está vacío o el email no es válido");
+                return false;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

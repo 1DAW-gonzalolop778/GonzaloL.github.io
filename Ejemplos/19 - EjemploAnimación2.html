@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background: yellow;
+}
+#animacion {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: red;
+  display: block;
+}
+</style>
+<body>
+
+<p><button onclick="mover()">Inicia</button></p> 
+<p><button onclick="parar()">Para</button></p> 
+
+<div id ="container">
+  <div id ="animacion"></div>
+</div>
+
+<script>
+
+ //declaro las variables y constantes y las inicializo
+  let id = null;
+  const elem = document.getElementById("animacion");   
+  clearInterval(id);
+
+function mover() {
+  // Defino el intevalo de ejecución de la función frame (animación)
+  id = setInterval(frame, 500);
+
+  function frame() {
+    if (elem.style.display === "block") {
+        elem.style.display ="none";
+    } else {
+      elem.style.display ="block";
+    }
+  }
+}
+
+function parar(){
+    clearInterval(id);
+}
+</script>
+
+</body>
+</html>

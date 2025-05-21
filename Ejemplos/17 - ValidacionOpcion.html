@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validacion Opción</h2>
+
+<form name = "formulario" onsubmit="return validarGenero()">
+  Género:
+  <select name = "equipo">
+    <option value="">Selecciona una opción</option>
+    <option value="Betis">Betis</option>
+    <option value="Sevilla">Sevilla</option>
+  </select>
+  <input type="submit" value="Enviar">
+</form>
+
+<script>
+function validarGenero() {
+  let equipo = document.forms["formulario"]["equipo"].value;
+  if (equipo == "") {
+    alert("Por favor, selecciona un equipo.");
+    return false;
+  }
+  alert("Tue quipo es el " + equipo)
+  return true;
+}
+</script>
+
+</body>
+</html> 

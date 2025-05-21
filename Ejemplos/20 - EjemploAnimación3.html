@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #contenedor {
+      width: 500px;
+      height: 50px;
+      border: 1px solid #000;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #texto {
+      position: absolute;
+      left: 0;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+<div id="contenedor">
+  <div id="texto">Este texto se está moviendo...</div>
+</div>
+
+<script>
+  let id = null;
+  let pos = 0;
+  const texto = document.getElementById("texto");
+  clearInterval(id);
+
+  id = setInterval(frame, 10);
+
+  function frame() {
+    if (pos > 500){
+        pos = -texto.offsetWidth;
+        texto. style.left = pos;
+    }
+    else{
+        texto. style.left = pos + "px";
+        pos ++;
+    }
+  }
+
+</script>
+
+</body>
+</html>
