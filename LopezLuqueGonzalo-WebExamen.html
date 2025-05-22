@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Frutería online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        
+        header {
+            background-color: #84faab;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5rem;
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+        header img{
+            width:150px;
+            height:150px;
+        }
+
+        #contenedor-principal{
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 20px;
+        }
+        
+        .bienvenida {
+            padding: 20px;
+            font-size: 18px;
+        }
+        #oferta-contenedor {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 20px;
+        }
+        #zona-ofertas {
+            background-color: #ffffcc;
+            padding: 15px;
+            flex: 1;
+            border: 2px solid #ccc;
+            color: black;
+        }
+        .btn-oferta {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            height: fit-content;
+        }
+        #myform {
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .clase-form {
+            margin: 5px 0;
+            padding: 8px;
+            max-width: 300px;
+        }
+        .marco-lista {
+            border: 2px solid #aaa;
+            padding: 5px 10px;
+            margin-top: 15px;
+            max-width: 400px;
+            background-color: #f9f9f9;
+        }
+        #contenedor-lista{
+            margin-top: 15px;
+        }
+        .marco-lista h4 {
+            margin-top: 0;
+        }
+        #lista {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+        #boton-condiciones, #boton-enviar{
+            margin-top: 15px;
+        }
+        #condiciones {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+        }
+        li {
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="contenedor-principal">
+
+        <header>
+            <img src="imagenlimon.png">
+            <h1>Frutería online</h1>
+            <img src="imagennaranja.png">
+        </header>
+
+        <div class="bienvenida">
+            ¡Bienvenido a nuestra tienda en línea! Aquí encontrarás las mejores ofertas para tus compras.
+        </div>
+
+        <div id="oferta-contenedor">
+            <div id="zona-ofertas">
+                Pulsa en "ver mi oferta" para conseguir una oferta exclusiva
+            </div>
+            <button id="btn-oferta" onclick="generaOferta()">Ver mi oferta</button>
+        </div>
+
+        <form name="formulario" id="myform" onsubmit="return validaFormulario()">
+            <h2>Formulario de Compra</h2>
+            Usuario: <input class="clase-form" type="text" id="usuario"><br>
+            Contraseña: <input class="clase-form" type="password" id="contrasena"><br>
+            <br>
+            <p id="texto-lista"><u><b>Selecciona los elementos a comprar:</b></u></p>
+
+            <select class="clase-form" id="selector">
+                <option value="Manzanas">Manzanas</option>
+                <option value="Peras">Peras</option>
+                <option value="Naranjas">Naranjas</option>
+            </select><br>
+
+            <button type="button" onclick="agregarElemento()">Añadir a la lista</button>
+
+        <div class="marco-lista">
+            <h4>Productos seleccionados:</h4>
+            <div id="contenedor-lista">
+                <ul id="lista" class="lista"></ul>
+            </div>
+        </div>
+        <input id="boton-enviar" type="submit">
+
+    </form>
+
+    <hr>
+
+    <button id="boton-condiciones" onclick="mostrarCondiciones()">Ver condiciones</button>
+        <p id="condiciones">Estas son las condiciones del servicio: todos los productos están sujetos a disponibilidad. Consulte términos adicionales en nuestra sección legal.</p>
+</div>
+
+    <script>
+        ofertas= [
+            "¡Enhorabuena! Has conseguido un descuento del 10% en su compra",
+            "¡Enhorabuena! Has conseguido un descuento del 20% en su compra",
+            "¡Enhorabuena! Has conseguido un descuento del 30% en su compra",
+        ];
+
+        //Función para generar la oferta del cliente
+        function generaOferta(){
+            //Defino variables y constantes necesarias
+            const textoOferta = document.getElementById("zona-ofertas");
+            const botonOferta = document.getElementById("btn-oferta");
+            let id = null;
+            let ofertaSeleccionada;
+
+            botonOferta.style.display="none";
+
+            //Sorteo la oferta (usar función "numeroAleatorio")y asigno el nuevo texto al DIV "zona-ofertas"
+            
+            //COMPLETA EL CÓDIGO
+            ofertaSeleccionada = ofertas[numeroAleatorio(0, 2)];
+            textoOferta.innerHTML = ofertaSeleccionada;
+            
+            //Inicializo el contador
+            
+            //COMPLETA EL CÓDIGO
+            
+            id = setInterval(frame, 500);
+
+             //Función de la animación
+            function frame() {
+                //Si el color del texto del <div> "zona-ofertas" es negro, lo pongo rojo, sino lo pongo negro. Esta animación no se para en nigún momento.
+              
+                //COMPLETA EL CÓDIGO
+
+                if (textoOferta.style.color === "red"){
+                    textoOferta.style.color = "black";
+                }else{
+                    textoOferta.style.color = "red";
+                }
+            }
+        }
+
+         //Función para gnerar un número aleatorio
+        function numeroAleatorio(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        //Función que agrega nuevos productos a la lista de Productos seleccionados
+        function agregarElemento() {
+            // Defino las constantes necesarias con los elementos que voy a usar
+            const selector = document.getElementById("selector");
+            const lista = document.getElementById("lista");
+            const nuevo = document.createElement("li");
+
+            //Se crea un nuevo elemento <li> y se añade a la lista. El valor del nuevo elemento debe ser el la opción seleccionada en el select.
+            
+                //COMPLETA EL CÓDIGO
+                let opcion = document.forms["formulario"]["selector"].value;
+                if(opcion != ""){
+                    nuevo.innerHTML = opcion;
+                    lista.appendChild(nuevo);
+
+                }
+        }
+
+        //Función que muestra el <p> con id="condiciones" que inicialmente está oculto. No es necesario ocultarlo si el texto ya está visible
+        function mostrarCondiciones() {
+           
+            //COMPLETA EL CÓDIGO
+            document.getElementById("condiciones").style.display = 'block';
+
+
+        }
+
+        //Función que valida el formulario antes de enviarlo. Debe evaluar 3 cosas:
+        //  - Que el campo usuario tenga más de 4 y la contraseña contenga el carácter "%")
+        //  - Que se hay al menos un elemento en la lista
+        //Comprobar cada una de las condiciones por separado. En todos los casos se mostrará una ventana de alerta avisando de cuál es la condición que no se cumple
+        function validaFormulario(){
+            //Defino variables y constantes necesarias
+            const usuario = document.forms["formulario"]["usuario"].value;
+            const contraseña = document.forms["formulario"]["contrasena"].value;
+            const elemlist = document.getElementsByTagName("li"); //Pista: ¿Qué nos devuelve getElementsByTagName?
+            let tam = usuario.length;
+
+            //Si el usuario tiene menos de 4 caracterees o la contraseña no contien el caracter "%" dará error,
+            // sino, si no hay elemento en la lista dará error, sino validación correcta
+            //Pista: resolver con un if-eslse anidado
+    
+            //COMPLETA EL CÓDIGO
+            if (usuario.length < 4){
+                window.alert("El usuario debe de tener más de 4 caracteres");
+                return false;
+            }else if (contraseña.includes("%")){
+                if(elemlist.length != 0){
+                    return true;
+                }else{
+                    window.alert("Debe tener al menos un elemento la lista")
+                    return false;
+                    
+                }
+            }else{
+                window.alert("La contraseña debe tener el elemento %")
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>
